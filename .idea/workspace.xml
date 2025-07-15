@@ -5,9 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26fc055f-9012-4ae1-ae19-3223221901dd" name="Changes" comment="Initial commit - adding all project files">
-      <change beforePath="$PROJECT_DIR$/.gitignore.txt" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jcalendar_tz_1_3_3_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_28.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bank Mgmt System with ATM simulation.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/face_1159.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/face_1160.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/face_1161.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jcalendar-tz-1.3.3-4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/BalanceEnquiry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Conn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Deposit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/FastCash.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/MiniStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Pin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Signup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Signup2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Signup3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Withdraw.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/haarcascade_frontalface_default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/main_Class.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/testCam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/haarcascade_frontalface_default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icon/atm2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icon/backbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icon/bank.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icon/card.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icon/provider.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bank Mgmt System with ATM simulation/bank/management/system/with/ATM/simulation/haarcascade_frontalface_default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bank Mgmt System with ATM simulation/bank/management/system/with/ATM/simulation/haarcascade_frontalface_default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bank Mgmt System with ATM simulation/haarcascade_frontalface_default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bank Mgmt System with ATM simulation/haarcascade_frontalface_default.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +231,7 @@
       <workItem from="1752545727287" duration="1841000" />
       <workItem from="1752548297624" duration="313000" />
       <workItem from="1752548631227" duration="511000" />
-      <workItem from="1752549166462" duration="481000" />
+      <workItem from="1752549166462" duration="724000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit - adding all project files">
       <option name="closed" value="true" />
@@ -209,13 +241,22 @@
       <option name="project" value="LOCAL" />
       <updated>1752546944617</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial commit - adding all project files">
+      <option name="closed" value="true" />
+      <created>1752549684773</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1752549684773</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Clean repo: removed compiled files and IDE configs, added source files" />
     <MESSAGE value="Initial commit - adding all project files" />
     <option name="LAST_COMMIT_MESSAGE" value="Initial commit - adding all project files" />
   </component>
