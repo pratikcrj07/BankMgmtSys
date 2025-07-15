@@ -41,26 +41,6 @@ The system operates similar to a real-world ATM, supporting multiple transaction
 
 ---
 
-##  Project Structure
-
-Bank-ATM-Simulator-Java/
-│
-├── src/ # Java source code
-│ ├── bank/management/ # All banking operations
-│ ├── atm/simulator/ # ATM Simulator modules
-│ ├── face/recognition/ # Face capture & login
-│ └── utils/ # Helper classes, DB connection
-│
-├── assets/ # Images, icons, face datasets
-├── sql/ # Database schema and setup scripts
-├── README.md # Project documentation
-└── LICENSE # License (MIT recommended)
-
-yaml
-Copy
-Edit
-
----
 
 ##  Getting Started
 
@@ -76,8 +56,8 @@ Edit
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/Bank-ATM-Simulator-Java.git
-   cd Bank-ATM-Simulator-Java
+   git clone https://github.com/pratikcrj07/BankMgmtSys.git
+  
 Configure Database
 
 Create a database in MySQL.
