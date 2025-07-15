@@ -1,0 +1,40 @@
+<changelist name="Changes" date="1752545624144" recycled="false">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Changes/shelved.patch" />
+  <option name="DESCRIPTION" value="Changes" />
+  <binary>
+    <option name="AFTER_PATH" value="src/icon/atm2.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Changes/atm2.png" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="src/icon/backbg.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Changes/backbg.png" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="src/icon/bank.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Changes/bank.png" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="src/icon/card.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Changes/card.png" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="images/face_1159.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Changes/face_1159.png" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="images/face_1160.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Changes/face_1160.png" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="images/face_1161.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Changes/face_1161.png" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="jcalendar-tz-1.3.3-4.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Changes/jcalendar-tz-1.3.3-4.jar" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="src/icon/provider.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Changes/provider.png" />
+  </binary>
+</changelist>
