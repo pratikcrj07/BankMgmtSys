@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26fc055f-9012-4ae1-ae19-3223221901dd" name="Changes" comment="" />
+    <list default="true" id="26fc055f-9012-4ae1-ae19-3223221901dd" name="Changes" comment="Initial commit - adding all project files">
+      <change beforePath="$PROJECT_DIR$/.gitignore.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +23,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="WARN_ABOUT_CRLF" value="false" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -46,43 +51,55 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Deposit.executor": "Run",
-    "Application.FastCash.executor": "Run",
-    "Application.Login.executor": "Run",
-    "Application.Pin.executor": "Run",
-    "Application.Signup.executor": "Run",
-    "Application.Signup2.executor": "Run",
-    "Application.Signup3.executor": "Run",
-    "Application.test.executor": "Run",
-    "Application.testCam.executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/pratik_icy/IdeaProjects/Bank Mgmt System with ATM simulation/src/bank/management/system/with/ATM/simulation",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/pratik_icy/IdeaProjects/Bank Mgmt System with ATM simulation/src/Main.java",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Deposit.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FastCash.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Login.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Pin.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Signup.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Signup2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Signup3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.test.executor&quot;: &quot;Run&quot;,
+    &quot;Application.testCam.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/pratik_icy/IdeaProjects/Bank Mgmt System with ATM simulation/src/bank/management/system/with/ATM/simulation&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/pratik_icy/IdeaProjects/Bank Mgmt System with ATM simulation/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\pratik_icy\IdeaProjects\Bank Mgmt System with ATM simulation\src\bank\management\system\with\ATM\simulation" />
       <recent name="C:\Users\pratik_icy\IdeaProjects\Bank Mgmt System with ATM simulation\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Signup">
+  <component name="RunManager" selected="Application.BalanceEnquiry">
+    <configuration name="BalanceEnquiry" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bank.management.system.with.ATM.simulation.BalanceEnquiry" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bank.management.system.with.ATM.simulation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bank.management.system.with.ATM.simulation.Login" />
       <module name="Bank Mgmt System with ATM simulation" />
@@ -137,6 +154,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BalanceEnquiry" />
         <item itemvalue="Application.Login" />
         <item itemvalue="Application.Signup" />
         <item itemvalue="Application.Signup2" />
@@ -178,12 +196,28 @@
       <workItem from="1752388868997" duration="736000" />
       <workItem from="1752544354895" duration="52000" />
       <workItem from="1752544722422" duration="982000" />
-      <workItem from="1752545727287" duration="1103000" />
+      <workItem from="1752545727287" duration="1841000" />
+      <workItem from="1752548297624" duration="313000" />
+      <workItem from="1752548631227" duration="511000" />
+      <workItem from="1752549166462" duration="481000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit - adding all project files">
+      <option name="closed" value="true" />
+      <created>1752546944617</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1752546944617</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit - adding all project files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit - adding all project files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
