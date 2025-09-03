@@ -10,7 +10,7 @@ public class testCam {
     public static void main(String[] args) {
         VideoCapture cam = new VideoCapture(0);
         if (!cam.isOpened()) {
-            System.out.println("❌ Camera not opening");
+            System.out.println("Camera not opening");
             return;
         }
         Mat frame = new Mat();
