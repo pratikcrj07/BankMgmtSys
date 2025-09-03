@@ -9,12 +9,12 @@ import java.util.Date;
 import java.sql.PreparedStatement;
 
 public class Deposit extends JFrame implements ActionListener {
-    String cardNumber;    // Use card number here directly
+    String cardNumber;    
     TextField amountField;
 
     JButton depositBtn, backBtn;
 
-    // Constructor now takes cardNumber directly
+    
     public Deposit(String cardNumber) {
         this.cardNumber = cardNumber;
 
