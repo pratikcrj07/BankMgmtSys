@@ -93,7 +93,7 @@ public class Signup extends JFrame implements ActionListener {
         dateChooser.getDateEditor().setEnabled(false);
         dateChooser.getDateEditor().setEnabled(false);
 
-        // Listen for invalid DOB
+        
         dateChooser.getDateEditor().addPropertyChangeListener(new PropertyChangeListener() {
             @Override
             public void propertyChange(PropertyChangeEvent evt) {
