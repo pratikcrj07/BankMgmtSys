@@ -119,13 +119,13 @@ public class FastCash extends JFrame implements ActionListener {
                         + cardNumber + "', '" + now + "', 'Withdrawl', '" + amount + "')";
                 c.s.executeUpdate(sql);
 
-                JOptionPane.showMessageDialog(null, "✅ Rs. " + amount + " Debited Successfully");
+                JOptionPane.showMessageDialog(null, " Rs. " + amount + " Debited Successfully");
                 setVisible(false);
                 new main_Class(cardNumber);
 
             } catch (Exception ex) {
                 ex.printStackTrace();
-                JOptionPane.showMessageDialog(null, "❌ Error: " + ex.getMessage());
+                JOptionPane.showMessageDialog(null, "Error: " + ex.getMessage());
             }
         }
     }
