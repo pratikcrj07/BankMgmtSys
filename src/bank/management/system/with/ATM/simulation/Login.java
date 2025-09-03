@@ -162,7 +162,7 @@ public class Login extends JFrame implements ActionListener {
 
         camera = new VideoCapture(0);
         if (!camera.isOpened()) {
-            JOptionPane.showMessageDialog(this, "❌ Cannot open webcam.");
+            JOptionPane.showMessageDialog(this, " Cannot open webcam.");
             return;
         }
 
@@ -206,7 +206,7 @@ public class Login extends JFrame implements ActionListener {
 
         Rect[] detectedFaces = faces.toArray();
         if (detectedFaces.length == 0) {
-            JOptionPane.showMessageDialog(this, "✘ No face detected.");
+            JOptionPane.showMessageDialog(this, " No face detected.");
             return;
         }
 
@@ -229,7 +229,7 @@ public class Login extends JFrame implements ActionListener {
 
                 File f = new File(storedFacePath);
                 if (!f.exists()) {
-                    System.out.println("❌ File not found: " + storedFacePath);
+                    System.out.println(" File not found: " + storedFacePath);
                     continue;
                 }
 
@@ -272,7 +272,7 @@ public class Login extends JFrame implements ActionListener {
         if (found) {
             signIn();
         } else {
-            JOptionPane.showMessageDialog(this, "✘ Face not recognized.");
+            JOptionPane.showMessageDialog(this, " Face not recognized.");
         }
     }
 
