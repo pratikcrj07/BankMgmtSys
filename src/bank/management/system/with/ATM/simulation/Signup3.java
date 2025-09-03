@@ -53,7 +53,7 @@ public class Signup3 extends JFrame implements ActionListener {
 
         int row = 0;
 
-        // ✅ Logo + Form No
+        
         JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 30, 0));
         topPanel.setOpaque(false);
 
@@ -71,7 +71,6 @@ public class Signup3 extends JFrame implements ActionListener {
         gbc.anchor = GridBagConstraints.CENTER;
         card.add(topPanel, gbc);
 
-        // ✅ Page Label
         JLabel pageLabel = new JLabel("Page 3 : CREDENTIALS");
         pageLabel.setFont(new Font("Segoe UI", Font.PLAIN, 20));
         pageLabel.setForeground(new Color(0, 51, 102));
@@ -79,7 +78,7 @@ public class Signup3 extends JFrame implements ActionListener {
         gbc.anchor = GridBagConstraints.EAST;
         card.add(pageLabel, gbc);
 
-        // ✅ Personal Details
+        
         JPanel detailsPanel = new JPanel(new GridBagLayout());
         detailsPanel.setBackground(Color.WHITE);
         detailsPanel.setBorder(new CompoundBorder(
@@ -101,7 +100,7 @@ public class Signup3 extends JFrame implements ActionListener {
         gbc.gridy = row++;
         card.add(detailsPanel, gbc);
 
-        // ✅ Account Type
+        
         JLabel accountLabel = createLabel("Account Type:");
         gbc.gridy = row++;
         gbc.anchor = GridBagConstraints.WEST;
@@ -134,13 +133,13 @@ public class Signup3 extends JFrame implements ActionListener {
         gbc.anchor = GridBagConstraints.CENTER;
         card.add(accountPanel, gbc);
 
-        // ✅ PIN Label
+        
         JLabel pinLabel = createLabel("Set PIN (4-digits):");
         gbc.gridy = row++;
         gbc.anchor = GridBagConstraints.WEST;
         card.add(pinLabel, gbc);
 
-        // ✅ PIN Panel
+        
         JPanel pinPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 15, 1));
         pinPanel.setBackground(Color.WHITE);
 
@@ -157,7 +156,7 @@ public class Signup3 extends JFrame implements ActionListener {
         gbc.gridy = row++;
         card.add(pinPanel, gbc);
 
-        // ✅ Declaration
+        
         declarationCheckbox = new JCheckBox("I declare that all details are correct & accept bank terms.");
         declarationCheckbox.setFont(new Font("Segoe UI", Font.PLAIN, 16));
         declarationCheckbox.setBackground(Color.WHITE);
@@ -167,7 +166,7 @@ public class Signup3 extends JFrame implements ActionListener {
         gbc.anchor = GridBagConstraints.CENTER;
         card.add(declarationCheckbox, gbc);
 
-        // ✅ Buttons
+        
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT, 20, 0));
         buttonPanel.setOpaque(false);
 
