@@ -107,7 +107,7 @@ public class FastCash extends JFrame implements ActionListener {
                 }
 
                 if (balance < amount) {
-                    JOptionPane.showMessageDialog(null, "❌ Insufficient Balance");
+                    JOptionPane.showMessageDialog(null, " Insufficient Balance");
                     return;
                 }
 
