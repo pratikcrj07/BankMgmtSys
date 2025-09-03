@@ -14,20 +14,20 @@ public class MiniStatement extends JFrame implements ActionListener {
     MiniStatement(String cardNumber) {
         this.cardNumber = cardNumber;
 
-        // Frame base settings
+        
         setTitle("Mini Statement");
         setSize(500, 600);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // Use a JPanel with BoxLayout
+        
         JPanel contentPane = new JPanel();
         contentPane.setBackground(new Color(245, 250, 255));
         contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.Y_AXIS));
         contentPane.setBorder(new EmptyBorder(20, 20, 20, 20));
         setContentPane(contentPane);
 
-        // Bank title
+        
         JLabel bankLabel = new JLabel("Bank Management System");
         bankLabel.setFont(new Font("Segoe UI", Font.BOLD, 22));
         bankLabel.setForeground(new Color(0, 102, 204));
@@ -36,14 +36,14 @@ public class MiniStatement extends JFrame implements ActionListener {
 
         contentPane.add(Box.createRigidArea(new Dimension(0, 20)));
 
-        // Card number label
+        
         JLabel cardLabel = new JLabel();
         cardLabel.setFont(new Font("Segoe UI", Font.PLAIN, 16));
         cardLabel.setForeground(Color.DARK_GRAY);
         cardLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         contentPane.add(cardLabel);
 
-        // Current balance label
+        
         JLabel balanceLabel = new JLabel();
         balanceLabel.setFont(new Font("Segoe UI", Font.BOLD, 18));
         balanceLabel.setForeground(new Color(0, 153, 76));
@@ -52,7 +52,7 @@ public class MiniStatement extends JFrame implements ActionListener {
 
         contentPane.add(Box.createRigidArea(new Dimension(0, 20)));
 
-        // Transactions area inside scroll pane
+        
         JTextArea transactionsArea = new JTextArea();
         transactionsArea.setFont(new Font("Consolas", Font.PLAIN, 14));
         transactionsArea.setEditable(false);
@@ -75,7 +75,7 @@ public class MiniStatement extends JFrame implements ActionListener {
         closeButton.addActionListener(this);
         contentPane.add(closeButton);
 
-        // Fetch and set data
+        
         try {
             Conn c = new Conn();
 
@@ -88,7 +88,7 @@ public class MiniStatement extends JFrame implements ActionListener {
                 cardLabel.setText("Card Number: Not Found");
             }
 
-            // Show transactions ordered by txn_date DESC
+            
             ResultSet rsTxn = c.s.executeQuery(
                     "SELECT * FROM Transactions WHERE card_number = '" + cardNumber + "' ORDER BY txn_date DESC"
             );
