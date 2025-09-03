@@ -97,7 +97,7 @@ public class Deposit extends JFrame implements ActionListener {
                 ps.executeUpdate();
                 ps.close();
 
-                JOptionPane.showMessageDialog(null, "✅ Rs. " + amount + " Deposited Successfully");
+                JOptionPane.showMessageDialog(null, " Rs. " + amount + " Deposited Successfully");
 
                 setVisible(false);
                 new main_Class(cardNumber); // Pass cardNumber, NOT formno!
