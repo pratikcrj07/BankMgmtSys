@@ -10,9 +10,9 @@ public class Conn {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             c = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/bank_system", //  must exist!
+                    "jdbc:mysql://localhost:3306/bank_system", 
                     "root",
-                    "root" // ✅ your real password
+                    "root"
             );
             s = c.createStatement(); //  `s` is the Statement
             System.out.println(" DB connection successful");
