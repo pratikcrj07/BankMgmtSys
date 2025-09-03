@@ -66,7 +66,7 @@ public class Deposit extends JFrame implements ActionListener {
                 String amountStr = amountField.getText().trim();
 
                 if (amountStr.isEmpty()) {
-                    JOptionPane.showMessageDialog(null, "⚠️ Please enter the amount you want to deposit");
+                    JOptionPane.showMessageDialog(null, " Please enter the amount you want to deposit");
                     return;
                 }
 
@@ -74,11 +74,11 @@ public class Deposit extends JFrame implements ActionListener {
                 try {
                     amount = Double.parseDouble(amountStr);
                     if (amount <= 0) {
-                        JOptionPane.showMessageDialog(null, "⚠️ Amount must be positive");
+                        JOptionPane.showMessageDialog(null, " Amount must be positive");
                         return;
                     }
                 } catch (NumberFormatException nfe) {
-                    JOptionPane.showMessageDialog(null, "⚠️ Please enter a valid numeric amount");
+                    JOptionPane.showMessageDialog(null, " Please enter a valid numeric amount");
                     return;
                 }
 
