@@ -78,15 +78,15 @@ public class Pin extends JFrame implements ActionListener {
         String rePin = new String(reEnterPinField.getPassword()).trim();
 
         if (!newPin.equals(rePin)) {
-            JOptionPane.showMessageDialog(null, "❌ Entered PIN does not match.");
+            JOptionPane.showMessageDialog(null, " Entered PIN does not match.");
             return;
         }
         if (newPin.isEmpty() || rePin.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "❌ PIN fields cannot be empty.");
+            JOptionPane.showMessageDialog(null, " PIN fields cannot be empty.");
             return;
         }
         if (!newPin.matches("\\d{4}")) {
-            JOptionPane.showMessageDialog(null, "❌ PIN must be exactly 4 digits.");
+            JOptionPane.showMessageDialog(null, " PIN must be exactly 4 digits.");
             return;
         }
 
@@ -102,18 +102,18 @@ public class Pin extends JFrame implements ActionListener {
                 int rowsUpdated = ps.executeUpdate();
 
                 if (rowsUpdated > 0) {
-                    JOptionPane.showMessageDialog(null, "✅ PIN changed successfully!");
+                    JOptionPane.showMessageDialog(null, " PIN changed successfully!");
                     setVisible(false);
                     new main_Class(cardNumber); // Keep same cardnumber, updated PIN is in DB.
                 } else {
-                    JOptionPane.showMessageDialog(null, "❌ Card Number did not match any record. PIN not updated.");
+                    JOptionPane.showMessageDialog(null, " Card Number did not match any record. PIN not updated.");
                 }
 
                 ps.close();
 
             } catch (Exception ex) {
                 ex.printStackTrace();
-                JOptionPane.showMessageDialog(null, "❌ Error changing PIN. Check your database connection and query.");
+                JOptionPane.showMessageDialog(null, " Error changing PIN. Check your database connection and query.");
             }
         } else if (ae.getSource() == backBtn) {
             setVisible(false);
@@ -122,6 +122,6 @@ public class Pin extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        new Pin("cardNumber"); // For testing only — pass a valid card number
+        new Pin("cardNumber"); 
     }
 }
