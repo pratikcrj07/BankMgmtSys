@@ -49,7 +49,7 @@ The system operates similar to a real-world ATM, supporting multiple transaction
 - Java JDK 8+  
 - MySQL Server + Workbench  
 - OpenCV library (Java bindings)  
-- IDE (IntelliJ IDEA, Eclipse, or NetBeans)  
+- IDE (IntelliJ IDEA, or NetBeans)  
 - Git
 
 ### ⚙ Setup
