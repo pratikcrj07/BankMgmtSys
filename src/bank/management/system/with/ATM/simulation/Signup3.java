@@ -1,5 +1,7 @@
 package bank.management.system.with.ATM.simulation;
 
+import com.formdev.flatlaf.FlatIntelliJLaf;
+
 import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.*;
@@ -21,6 +23,8 @@ public class Signup3 extends JFrame implements ActionListener {
         super("APPLICATION FORM - PAGE 3");
         this.formno = formno;
 
+        FlatIntelliJLaf.setup();  // Set FlatLaf theme
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1300, 770);
         setLocationRelativeTo(null);
@@ -31,8 +35,8 @@ public class Signup3 extends JFrame implements ActionListener {
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
                 Graphics2D g2 = (Graphics2D) g;
-                g2.setPaint(new GradientPaint(0, 0, new Color(245, 248, 255),
-                        0, getHeight(), new Color(222, 230, 255)));
+                g2.setPaint(new GradientPaint(0, 0, new Color(210, 225, 255),
+                        0, getHeight(), new Color(180, 200, 255)));
                 g2.fillRect(0, 0, getWidth(), getHeight());
             }
         };
@@ -41,7 +45,7 @@ public class Signup3 extends JFrame implements ActionListener {
         JPanel card = new JPanel(new GridBagLayout());
         card.setBackground(new Color(255, 255, 255, 240));
         card.setBorder(new CompoundBorder(
-                new LineBorder(new Color(0, 51, 102), 3, true),
+                new LineBorder(new Color(40, 90, 140), 3, true),
                 new EmptyBorder(40, 60, 40, 60)
         ));
 
@@ -53,7 +57,7 @@ public class Signup3 extends JFrame implements ActionListener {
 
         int row = 0;
 
-        // ✅ Logo + Form No
+        // Top logo + form label
         JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 30, 0));
         topPanel.setOpaque(false);
 
@@ -64,14 +68,14 @@ public class Signup3 extends JFrame implements ActionListener {
 
         JLabel formNoLabel = new JLabel("APPLICATION FORM NO: " + formno);
         formNoLabel.setFont(new Font("Segoe UI", Font.BOLD, 28));
-        formNoLabel.setForeground(new Color(0, 51, 102));
+        formNoLabel.setForeground(new Color(20, 60, 120));
         topPanel.add(formNoLabel);
 
         gbc.gridy = row++;
         gbc.anchor = GridBagConstraints.CENTER;
         card.add(topPanel, gbc);
 
-        // ✅ Page Label
+        // Page title
         JLabel pageLabel = new JLabel("Page 3 : CREDENTIALS");
         pageLabel.setFont(new Font("Segoe UI", Font.PLAIN, 20));
         pageLabel.setForeground(new Color(0, 51, 102));
@@ -79,7 +83,7 @@ public class Signup3 extends JFrame implements ActionListener {
         gbc.anchor = GridBagConstraints.EAST;
         card.add(pageLabel, gbc);
 
-        // ✅ Personal Details
+        // Personal details panel
         JPanel detailsPanel = new JPanel(new GridBagLayout());
         detailsPanel.setBackground(Color.WHITE);
         detailsPanel.setBorder(new CompoundBorder(
@@ -101,7 +105,7 @@ public class Signup3 extends JFrame implements ActionListener {
         gbc.gridy = row++;
         card.add(detailsPanel, gbc);
 
-        // ✅ Account Type
+        // Account type
         JLabel accountLabel = createLabel("Account Type:");
         gbc.gridy = row++;
         gbc.anchor = GridBagConstraints.WEST;
@@ -134,13 +138,12 @@ public class Signup3 extends JFrame implements ActionListener {
         gbc.anchor = GridBagConstraints.CENTER;
         card.add(accountPanel, gbc);
 
-        // ✅ PIN Label
+        // PIN
         JLabel pinLabel = createLabel("Set PIN (4-digits):");
         gbc.gridy = row++;
         gbc.anchor = GridBagConstraints.WEST;
         card.add(pinLabel, gbc);
 
-        // ✅ PIN Panel
         JPanel pinPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 15, 1));
         pinPanel.setBackground(Color.WHITE);
 
@@ -157,7 +160,7 @@ public class Signup3 extends JFrame implements ActionListener {
         gbc.gridy = row++;
         card.add(pinPanel, gbc);
 
-        // ✅ Declaration
+        // Declaration
         declarationCheckbox = new JCheckBox("I declare that all details are correct & accept bank terms.");
         declarationCheckbox.setFont(new Font("Segoe UI", Font.PLAIN, 16));
         declarationCheckbox.setBackground(Color.WHITE);
@@ -167,7 +170,7 @@ public class Signup3 extends JFrame implements ActionListener {
         gbc.anchor = GridBagConstraints.CENTER;
         card.add(declarationCheckbox, gbc);
 
-        // ✅ Buttons
+        // Button Panel
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT, 20, 0));
         buttonPanel.setOpaque(false);
 
@@ -175,7 +178,7 @@ public class Signup3 extends JFrame implements ActionListener {
         styleButton(back);
         back.addActionListener(ev -> {
             setVisible(false);
-            new Signup2(formno);
+            new Signup2("");
         });
         buttonPanel.add(back);
 
@@ -292,28 +295,28 @@ public class Signup3 extends JFrame implements ActionListener {
         String pin = new String(pinField.getPassword()).trim();
 
         if (accountType == null) {
-            JOptionPane.showMessageDialog(this, "✘ Please select an account type.");
+            JOptionPane.showMessageDialog(this, " Please select an account type.");
         } else if (!pin.matches("\\d{4}")) {
-            JOptionPane.showMessageDialog(this, "✘ PIN must be exactly 4 digits.");
+            JOptionPane.showMessageDialog(this, " PIN must be exactly 4 digits.");
         } else if (!declarationCheckbox.isSelected()) {
-            JOptionPane.showMessageDialog(this, "✘ Please accept the declaration.");
+            JOptionPane.showMessageDialog(this, " Please accept the declaration.");
         } else {
             try {
                 Conn c = new Conn();
                 String query = "UPDATE signup SET account_type = '" + accountType + "', pin_number = '" + pin + "' WHERE formno = '" + formno + "'";
                 c.s.executeUpdate(query);
 
-                JOptionPane.showMessageDialog(this, "✔ Account Created Successfully!");
+                JOptionPane.showMessageDialog(this, " Account Created Successfully!");
                 setVisible(false);
                 new Login();
             } catch (Exception e) {
                 e.printStackTrace();
-                JOptionPane.showMessageDialog(this, "✘ Error occurred while saving data.");
+                JOptionPane.showMessageDialog(this, " Error occurred while saving data.");
             }
         }
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new Signup3("formno"));
+        SwingUtilities.invokeLater(() -> new Signup3(""));
     }
 }

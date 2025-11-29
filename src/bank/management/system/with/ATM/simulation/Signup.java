@@ -1,6 +1,7 @@
 package bank.management.system.with.ATM.simulation;
 
 import com.toedter.calendar.JDateChooser;
+import com.formdev.flatlaf.FlatLightLaf;
 
 import javax.swing.*;
 import javax.swing.border.*;
@@ -16,7 +17,7 @@ import java.util.Date;
 public class Signup extends JFrame implements ActionListener {
 
     JRadioButton r1, r2, r3, M1, M2, M3;
-    JButton next;
+    JButton next, back;
 
     JTextField textName, textFname, textEmail, textAdd, textCity, textPostal, textState;
     JDateChooser dateChooser;
@@ -24,7 +25,14 @@ public class Signup extends JFrame implements ActionListener {
     String formNo;
 
     public Signup() {
-        super("APPLICATION FORM");
+        //  Set FlatLaf look and feel
+        try {
+            UIManager.setLookAndFeel(new FlatLightLaf());
+        } catch (Exception ex) {
+            System.err.println("FlatLaf initialization failed");
+        }
+
+        super.setTitle("APPLICATION FORM");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1336, 768);
         setLocationRelativeTo(null);
@@ -91,24 +99,19 @@ public class Signup extends JFrame implements ActionListener {
         dateChooser.setFont(new Font("Segoe UI", Font.PLAIN, 14));
         dateChooser.setPreferredSize(new Dimension(250, 30));
         dateChooser.getDateEditor().setEnabled(false);
-        dateChooser.getDateEditor().setEnabled(false);
 
-        // Listen for invalid DOB
-        dateChooser.getDateEditor().addPropertyChangeListener(new PropertyChangeListener() {
-            @Override
-            public void propertyChange(PropertyChangeEvent evt) {
-                if ("date".equals(evt.getPropertyName())) {
-                    Date selected = dateChooser.getDate();
-                    if (selected != null) {
-                        Calendar cal = Calendar.getInstance();
-                        cal.add(Calendar.YEAR, -1); // min 1 year old
-                        if (selected.after(new Date()) || selected.after(cal.getTime())) {
-                            JOptionPane.showMessageDialog(Signup.this,
-                                    "Invalid DOB! Minimum age is 1 year.",
-                                    "DOB Error",
-                                    JOptionPane.WARNING_MESSAGE);
-                            dateChooser.setDate(null);
-                        }
+        dateChooser.getDateEditor().addPropertyChangeListener(evt -> {
+            if ("date".equals(evt.getPropertyName())) {
+                Date selected = dateChooser.getDate();
+                if (selected != null) {
+                    Calendar cal = Calendar.getInstance();
+                    cal.add(Calendar.YEAR, -16);
+                    if (selected.after(new Date()) || selected.after(cal.getTime())) {
+                        JOptionPane.showMessageDialog(Signup.this,
+                                "Invalid DOB! Minimum age is 16 year.",
+                                "DOB Error",
+                                JOptionPane.WARNING_MESSAGE);
+                        dateChooser.setDate(null);
                     }
                 }
             }
@@ -129,13 +132,11 @@ public class Signup extends JFrame implements ActionListener {
         card.add(maritalPanel, gbc);
 
         addLabel(card, gbc, "Address :", 0, row); textAdd = addField(card, gbc, 1, row++);
-
         addLabel(card, gbc, "City :", 0, row); textCity = addField(card, gbc, 1, row++);
-
         addLabel(card, gbc, "Postal Code :", 0, row); textPostal = addField(card, gbc, 1, row++);
-
         addLabel(card, gbc, "Province :", 0, row); textState = addField(card, gbc, 1, row++);
 
+        //  Buttons Panel with Back + Next
         next = new JButton("Next");
         next.setFont(new Font("Segoe UI", Font.BOLD, 14));
         next.setBackground(new Color(0, 102, 204));
@@ -145,7 +146,23 @@ public class Signup extends JFrame implements ActionListener {
         next.setBorder(new EmptyBorder(8, 20, 8, 20));
         next.addActionListener(this);
 
-        JPanel btnPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT)); btnPanel.setOpaque(false); btnPanel.add(next);
+        back = new JButton("Back to Login");
+        back.setFont(new Font("Segoe UI", Font.BOLD, 14));
+        back.setBackground(new Color(150, 0, 0));
+        back.setForeground(Color.WHITE);
+        back.setFocusPainted(false);
+        back.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        back.setBorder(new EmptyBorder(8, 20, 8, 20));
+        back.addActionListener(e -> {
+            this.setVisible(false);
+            new Login(); //  Replace with your actual Login class
+        });
+
+        JPanel btnPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        btnPanel.setOpaque(false);
+        btnPanel.add(back);
+        btnPanel.add(next);
+
         gbc.gridx = 1; gbc.gridy = row; gbc.anchor = GridBagConstraints.LINE_END;
         card.add(btnPanel, gbc);
 

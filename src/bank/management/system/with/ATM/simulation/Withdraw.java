@@ -1,6 +1,7 @@
 package bank.management.system.with.ATM.simulation;
 
-import javax.naming.Name;
+import com.formdev.flatlaf.FlatLightLaf;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,55 +13,74 @@ import java.util.Date;
 
 public class Withdraw extends JFrame implements ActionListener {
     String cardNumber;
-    TextField amountField;
+    JTextField amountField;
     JButton withdrawBtn, backBtn;
-  //  String Name;
+
     public Withdraw(String cardNumber) {
         this.cardNumber = cardNumber;
 
+        setTitle("ATM Withdraw");
+
+        // Background image
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/atm2.png"));
-        Image i2 = i1.getImage().getScaledInstance(1550, 830, Image.SCALE_DEFAULT);
+        Image i2 = i1.getImage().getScaledInstance(1550, 830, Image.SCALE_SMOOTH);
         JLabel bg = new JLabel(new ImageIcon(i2));
         bg.setBounds(0, 0, 1550, 830);
         add(bg);
 
+        // Labels
         JLabel label1 = new JLabel("MAXIMUM WITHDRAWAL IS RS.10,000");
         label1.setForeground(Color.WHITE);
-        label1.setFont(new Font("System", Font.BOLD, 16));
+        label1.setFont(new Font("Segoe UI", Font.BOLD, 16));
         label1.setBounds(460, 180, 700, 35);
         bg.add(label1);
 
         JLabel label2 = new JLabel("PLEASE ENTER YOUR AMOUNT");
         label2.setForeground(Color.WHITE);
-        label2.setFont(new Font("System", Font.BOLD, 16));
+        label2.setFont(new Font("Segoe UI", Font.BOLD, 16));
         label2.setBounds(460, 220, 400, 35);
         bg.add(label2);
 
-        amountField = new TextField();
+        // Amount field
+        amountField = new JTextField();
         amountField.setBackground(new Color(65, 125, 128));
         amountField.setForeground(Color.WHITE);
-        amountField.setBounds(460, 260, 320, 25);
-        amountField.setFont(new Font("Raleway", Font.BOLD, 22));
+        amountField.setBounds(460, 260, 320, 35);
+        amountField.setFont(new Font("Segoe UI", Font.BOLD, 22));
+        amountField.setBorder(BorderFactory.createCompoundBorder(
+                BorderFactory.createLineBorder(new Color(45, 95, 98), 2, true),
+                BorderFactory.createEmptyBorder(5, 10, 5, 10)
+        ));
         bg.add(amountField);
 
+        // Withdraw button
         withdrawBtn = new JButton("WITHDRAW");
-        withdrawBtn.setBounds(700, 362, 150, 35);
-        withdrawBtn.setBackground(new Color(65, 125, 128));
-        withdrawBtn.setForeground(Color.WHITE);
+        styleButton(withdrawBtn, new Color(0, 102, 204));
+        withdrawBtn.setBounds(700, 362, 150, 40);
         withdrawBtn.addActionListener(this);
         bg.add(withdrawBtn);
 
+        // Back button
         backBtn = new JButton("BACK");
-        backBtn.setBounds(700, 406, 150, 35);
-        backBtn.setBackground(new Color(65, 125, 128));
-        backBtn.setForeground(Color.WHITE);
+        styleButton(backBtn, new Color(100, 100, 100));
+        backBtn.setBounds(700, 406, 150, 40);
         backBtn.addActionListener(this);
         bg.add(backBtn);
 
         setLayout(null);
         setSize(1550, 1080);
         setLocation(0, 0);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
+    }
+
+    private void styleButton(JButton button, Color bgColor) {
+        button.setForeground(Color.WHITE);
+        button.setBackground(bgColor);
+        button.setFont(new Font("Segoe UI", Font.BOLD, 16));
+        button.setFocusPainted(false);
+        button.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        button.setBorder(BorderFactory.createLineBorder(bgColor.darker(), 1, true));
     }
 
     @Override
@@ -70,7 +90,7 @@ public class Withdraw extends JFrame implements ActionListener {
                 String amountStr = amountField.getText().trim();
 
                 if (amountStr.isEmpty()) {
-                    JOptionPane.showMessageDialog(this, " Please enter the amount you want to withdraw");
+                    JOptionPane.showMessageDialog(this, "Please enter the amount you want to withdraw");
                     return;
                 }
 
@@ -78,11 +98,11 @@ public class Withdraw extends JFrame implements ActionListener {
                 try {
                     amount = Double.parseDouble(amountStr);
                     if (amount <= 500 || amount > 100000) {
-                        JOptionPane.showMessageDialog(this, " Amount must be between Rs. 500 and Rs. 100000");
+                        JOptionPane.showMessageDialog(this, "Amount must be between Rs. 500 and Rs. 100000");
                         return;
                     }
                 } catch (NumberFormatException ex) {
-                    JOptionPane.showMessageDialog(this, " Please enter a valid numeric amount");
+                    JOptionPane.showMessageDialog(this, "Please enter a valid numeric amount");
                     return;
                 }
 
@@ -98,7 +118,7 @@ public class Withdraw extends JFrame implements ActionListener {
                 }
 
                 if (balance < amount) {
-                    JOptionPane.showMessageDialog(this, " Insufficient Balance! Current balance: Rs. " + balance);
+                    JOptionPane.showMessageDialog(this, "Insufficient Balance! Current balance: Rs. " + balance);
                     return;
                 }
 
@@ -116,7 +136,7 @@ public class Withdraw extends JFrame implements ActionListener {
                 ps.executeUpdate();
                 ps.close();
 
-                JOptionPane.showMessageDialog(this, " Rs. " + amount + " Debited Successfully " );
+                JOptionPane.showMessageDialog(this, "Rs. " + amount + " Debited Successfully");
 
                 setVisible(false);
                 new main_Class(cardNumber);
@@ -127,11 +147,16 @@ public class Withdraw extends JFrame implements ActionListener {
             }
         } catch (Exception ex) {
             ex.printStackTrace();
-            JOptionPane.showMessageDialog(this, " Error: " + ex.getMessage());
+            JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage());
         }
     }
 
     public static void main(String[] args) {
-        new Withdraw("cardNumber"); // Example only for testing, normally you don't call this
+        try {
+            UIManager.setLookAndFeel(new FlatLightLaf());
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        SwingUtilities.invokeLater(() -> new Withdraw(""));
     }
 }

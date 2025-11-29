@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26fc055f-9012-4ae1-ae19-3223221901dd" name="Changes" comment="Initial commit - adding all project files" />
+    <list default="true" id="26fc055f-9012-4ae1-ae19-3223221901dd" name="Changes" comment=" commit - adding all project files">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_28.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_28.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATMsimulation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ATMsimulation.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/BalanceEnquiry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/BalanceEnquiry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Conn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Conn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Deposit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Deposit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/FastCash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/FastCash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/MiniStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/MiniStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Pin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Pin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Signup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Signup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Signup2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Signup2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Signup3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Signup3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Withdraw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Withdraw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icon/backbg.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icon/backbg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icon/bank.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icon/bank.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icon/card.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icon/card.png" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +40,13 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SHOW_TAGS" value="false" />
     <option name="UPDATE_TYPE" value="REBASE" />
     <option name="WARN_ABOUT_CRLF" value="false" />
   </component>
@@ -41,66 +69,135 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
+  &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2swpHHh4dd05Db0QHa3mTiPr0KM" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ATMsimulation.Login.executor": "Run",
+    "Application.ATMsimulation.Signup2.executor": "Run",
+    "Application.ATMsimulation.Signup3.executor": "Run",
+    "Application.AdminDashboard.executor": "Run",
+    "Application.AdminLogin.executor": "Run",
     "Application.BalanceEnquiry.executor": "Run",
     "Application.Deposit.executor": "Run",
+    "Application.Details.executor": "Run",
+    "Application.FaceRecognizerLogin.executor": "Run",
     "Application.FastCash.executor": "Run",
     "Application.Login.executor": "Run",
+    "Application.MiniStatement.executor": "Run",
+    "Application.OpenCVTest (1).executor": "Run",
+    "Application.OpenCVTest .executor": "Run",
+    "Application.OpenCVTest.executor": "Run",
     "Application.Pin.executor": "Run",
     "Application.Signup.executor": "Run",
     "Application.Signup2.executor": "Run",
     "Application.Signup3.executor": "Run",
+    "Application.Unnamed.executor": "Run",
+    "Application.Withdraw.executor": "Run",
+    "Application.lbph.executor": "Run",
     "Application.test.executor": "Run",
     "Application.testCam.executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "<unknown>",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/pratik_icy/IdeaProjects/Bank Mgmt System with ATM simulation/src/bank/management/system/with/ATM/simulation",
+    "last_opened_file_path": "D:/pratik_icy/IdeaProjects/Bank Mgmt System with ATM simulation",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/pratik_icy/IdeaProjects/Bank Mgmt System with ATM simulation/src/Main.java",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory",
+      "module"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="bank.management.system.with.ATM.simulation" />
+      <recent name="ATMsimulation" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\pratik_icy\IdeaProjects\Bank Mgmt System with ATM simulation\src\bank\management\system\with\ATM\simulation" />
       <recent name="C:\Users\pratik_icy\IdeaProjects\Bank Mgmt System with ATM simulation\src" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ATMsimulation" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.BalanceEnquiry">
-    <configuration name="BalanceEnquiry" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bank.management.system.with.ATM.simulation.BalanceEnquiry" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="bank.management.system.with.ATM.simulation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="Application" />
+      </set>
+    </option>
+    <option name="hiddenConfigurations">
+      <map>
+        <entry key="Application">
+          <value>
+            <set>
+              <option value="Login" />
+              <option value="Signup" />
+              <option value="Signup2" />
+            </set>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Login">
+    <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
+      <option name="appName" />
+      <option name="appServicePlanName" />
+      <option name="appServicePlanResourceGroup" />
+      <option name="appSettingsKey" value="26ffeb06-370e-4d06-960c-725a1535f677" />
+      <option name="artifact" />
+      <option name="debugOptions" />
+      <option name="deployment" />
+      <option name="deploymentStagingDirectoryPath" />
+      <option name="funcPath" />
+      <option name="functionHostArguments" />
+      <option name="hostJsonPath" />
+      <option name="insightsName" />
+      <option name="instrumentationKey" />
+      <option name="javaVersion" />
+      <option name="localSettingsJsonPath" />
+      <option name="moduleName" />
+      <option name="os" />
+      <option name="pricingTier" />
+      <option name="providerMap">
+        <map />
+      </option>
+      <option name="region" />
+      <option name="resourceGroup" />
+      <option name="stagingFolder" />
+      <option name="subscription" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Login" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bank.management.system.with.ATM.simulation.Login" />
-      <module name="Bank Mgmt System with ATM simulation" />
+      <module name="ATMsimulation" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="bank.management.system.with.ATM.simulation.*" />
@@ -111,9 +208,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Signup" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Signup" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="bank.management.system.with.ATM.simulation.Signup" />
-      <module name="Bank Mgmt System with ATM simulation" />
+      <module name="ATMsimulation" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="bank.management.system.with.ATM.simulation.*" />
@@ -124,9 +221,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Signup2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Signup2" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bank.management.system.with.ATM.simulation.Signup2" />
-      <module name="Bank Mgmt System with ATM simulation" />
+      <module name="ATMsimulation" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="bank.management.system.with.ATM.simulation.*" />
@@ -137,34 +234,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Signup3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bank.management.system.with.ATM.simulation.Signup3" />
-      <module name="Bank Mgmt System with ATM simulation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="bank.management.system.with.ATM.simulation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="Application.Login" />
+      <item itemvalue="Application.Signup2" />
+      <item itemvalue="Application.Signup" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BalanceEnquiry" />
-        <item itemvalue="Application.Login" />
         <item itemvalue="Application.Signup" />
-        <item itemvalue="Application.Signup2" />
-        <item itemvalue="Application.Signup3" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26094.121" />
-        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-IU-251.26094.121" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.145" />
       </set>
     </attachedChunks>
   </component>
@@ -199,6 +284,75 @@
       <workItem from="1752548631227" duration="511000" />
       <workItem from="1752549166462" duration="724000" />
       <workItem from="1752549977775" duration="808000" />
+      <workItem from="1752903112753" duration="142000" />
+      <workItem from="1752906007688" duration="1000" />
+      <workItem from="1752912765215" duration="47000" />
+      <workItem from="1752913002380" duration="34000" />
+      <workItem from="1753667340848" duration="1000" />
+      <workItem from="1753755139412" duration="105000" />
+      <workItem from="1753760204980" duration="721000" />
+      <workItem from="1753781458689" duration="636000" />
+      <workItem from="1753784271887" duration="196000" />
+      <workItem from="1753800220715" duration="202000" />
+      <workItem from="1753804835665" duration="2818000" />
+      <workItem from="1753810525619" duration="597000" />
+      <workItem from="1753814376294" duration="510000" />
+      <workItem from="1753814906407" duration="1195000" />
+      <workItem from="1753926847308" duration="5093000" />
+      <workItem from="1753931987223" duration="721000" />
+      <workItem from="1753932918618" duration="719000" />
+      <workItem from="1753934670854" duration="670000" />
+      <workItem from="1753935482639" duration="484000" />
+      <workItem from="1753936077572" duration="817000" />
+      <workItem from="1753936914480" duration="44000" />
+      <workItem from="1753936984341" duration="398000" />
+      <workItem from="1753937616563" duration="380000" />
+      <workItem from="1753938025400" duration="20000" />
+      <workItem from="1753938171938" duration="1758000" />
+      <workItem from="1753940204693" duration="244000" />
+      <workItem from="1753940502484" duration="83000" />
+      <workItem from="1753940604719" duration="139000" />
+      <workItem from="1753941274371" duration="4045000" />
+      <workItem from="1753945717949" duration="107000" />
+      <workItem from="1753959625273" duration="464000" />
+      <workItem from="1753960109083" duration="1834000" />
+      <workItem from="1753971009552" duration="734000" />
+      <workItem from="1753971759377" duration="809000" />
+      <workItem from="1753976010000" duration="1667000" />
+      <workItem from="1753985394499" duration="153000" />
+      <workItem from="1753985631120" duration="853000" />
+      <workItem from="1753986507177" duration="1625000" />
+      <workItem from="1754033272870" duration="386000" />
+      <workItem from="1754033808394" duration="701000" />
+      <workItem from="1754034525032" duration="415000" />
+      <workItem from="1754035224232" duration="610000" />
+      <workItem from="1754035850233" duration="609000" />
+      <workItem from="1754038469633" duration="1059000" />
+      <workItem from="1754039574589" duration="132000" />
+      <workItem from="1754039806560" duration="1519000" />
+      <workItem from="1754041551475" duration="521000" />
+      <workItem from="1754042930138" duration="950000" />
+      <workItem from="1754043904271" duration="181000" />
+      <workItem from="1754044195416" duration="36000" />
+      <workItem from="1754056533450" duration="2620000" />
+      <workItem from="1754059181616" duration="34000" />
+      <workItem from="1754059525449" duration="2544000" />
+      <workItem from="1754066319180" duration="34000" />
+      <workItem from="1754069879846" duration="719000" />
+      <workItem from="1754071753344" duration="2284000" />
+      <workItem from="1754104551932" duration="300000" />
+      <workItem from="1754499997550" duration="630000" />
+      <workItem from="1754500946176" duration="458000" />
+      <workItem from="1754501418690" duration="1105000" />
+      <workItem from="1754502540315" duration="560000" />
+      <workItem from="1754536619619" duration="88000" />
+      <workItem from="1754536721361" duration="40000" />
+      <workItem from="1756900650787" duration="131000" />
+      <workItem from="1756900965932" duration="5066000" />
+      <workItem from="1756907471538" duration="700000" />
+      <workItem from="1756908255596" duration="581000" />
+      <workItem from="1757001200003" duration="7000" />
+      <workItem from="1764437974632" duration="349000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit - adding all project files">
       <option name="closed" value="true" />
@@ -222,10 +376,22 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Clean repo: removed compiled files and IDE configs, added source files" />
     <MESSAGE value="Initial commit - adding all project files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit - adding all project files" />
+    <MESSAGE value=" commit - adding all project files" />
+    <option name="LAST_COMMIT_MESSAGE" value=" commit - adding all project files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -234,6 +400,21 @@
           <properties class="java.sql.SQLException" package="java.sql" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.UnsatisfiedLinkError" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/AdminDashboard.java</url>
+          <line>245</line>
+          <option name="temporary" value="true" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/bank/management/system/with/ATM/simulation/Signup2.java</url>
+          <line>506</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

@@ -1,9 +1,6 @@
 # IntelliJ IDEA
 /.idea/
-/out/
 
-# Compiled class files
-*.class
 
 # Eclipse
 .classpath
@@ -35,6 +32,3 @@ bin/
 # Ignore database files (if any)
 /*.db
 
-# Ignore generated files
-*.jar
-*.war

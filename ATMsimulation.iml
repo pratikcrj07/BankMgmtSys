@@ -9,60 +9,6 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Documents/opencv-4.5.5-1.5.7.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/Documents/opencv-4.5.5-1.5.7-windows-x86_64.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/Documents/javacpp-1.5.7.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/Documents/openblas-0.3.19-1.5.7.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/Documents/openblas-0.3.19-1.5.7-windows-x86_64.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/jcalendar-tz-1.3.3-4.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
           <root url="jar://$MODULE_DIR$/../ATMsi/resource/flatlaf-3.6.1.jar!/" />
         </CLASSES>
         <JAVADOC />
@@ -78,7 +24,113 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" exported="" name="mysql-connector-java-8.0.28" level="project" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/resource/opencv-4.5.5-1.5.7.jar!/" />
+          <root url="jar://$MODULE_DIR$/resource/opencv-4.5.5-1.5.7-windows-x86_64.jar!/" />
+          <root url="jar://$MODULE_DIR$/resource/openblas-0.3.19-1.5.7.jar!/" />
+          <root url="jar://$MODULE_DIR$/resource/openblas-0.3.19-1.5.7-windows-x86_64.jar!/" />
+          <root url="jar://$MODULE_DIR$/resource/jcalendar-tz-1.3.3-4.jar!/" />
+          <root url="jar://$MODULE_DIR$/resource/javacpp-1.5.7.jar!/" />
+          <root url="jar://$MODULE_DIR$/resource/flatlaf-intellij-themes-3.5.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/resource/flatlaf-3.6.1.jar!/" />
+          <root url="file://$MODULE_DIR$" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/modules/java/generator/android-21/java" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/modules/java/generator/android-24/java" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/modules/java/generator/android/java" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/modules/java/generator/src/java" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/modules/java/test/android_test/src" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/modules/java/test/common_test/src" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/modules/java/test/pure_test/src" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/platforms/maven/opencv-it/src/test/java" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/android/15-puzzle/src" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/android/camera-calibration/src" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/android/color-blob-detection/src" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/android/face-detection/src" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/android/image-manipulations/src" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/android/mobilenet-objdetect/src" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/android/qr-detection/src" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/android/tutorial-1-camerapreview/src" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/android/tutorial-2-mixedprocessing/src" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/android/tutorial-3-cameracontrol/src" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/android/tutorial-4-opencl/src" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/android/video-recorder/src" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/ant/src" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/eclipse/HelloCV/src" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/sbt/src/main/java" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/Histograms_Matching/back_projection" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/Histograms_Matching/histogram_calculation" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/Histograms_Matching/histogram_comparison" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/Histograms_Matching/histogram_equalization" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ImgProc/BasicGeometricDrawing" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ImgProc/HitMiss" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ImgProc/Pyramids" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ImgProc/Smoothing" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ImgProc/changing_contrast_brightness_image" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ImgProc/erosion_dilatation" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ImgProc/morph_lines_detection" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ImgProc/opening_closing_hats" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ImgProc/threshold" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ImgProc/threshold_inRange" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ImgProc/tutorial_template_matching" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ImgTrans/Filter2D" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ImgTrans/HoughLine" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ImgTrans/LaPlace" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ImgTrans/MakeBorder" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ImgTrans/SobelDemo" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ImgTrans/canny_detector" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ImgTrans/distance_transformation" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ImgTrans/remap" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ImgTrans/warp_affine" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ShapeDescriptors/bounding_rects_circles" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ShapeDescriptors/bounding_rotated_ellipses" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ShapeDescriptors/find_contours" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ShapeDescriptors/hull" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ShapeDescriptors/moments" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ShapeDescriptors/point_polygon_test" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/TrackingMotion/corner_subpixels" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/TrackingMotion/generic_corner_detector" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/TrackingMotion/good_features_to_track" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/TrackingMotion/harris_detector" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/core/AddingImages" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/core/discrete_fourier_transform" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/core/mat_mask_operations" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/core/mat_operations" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/features2D/Homography" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/features2D/akaze_matching" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/features2D/feature_description" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/features2D/feature_detection" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/features2D/feature_flann_matcher" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/features2D/feature_homography" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/highgui/trackbar" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/introduction/documentation" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ml/introduction_to_pca" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ml/introduction_to_svm" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/ml/non_linear_svms" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/objectDetection/cascade_classifier" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/photo/hdr_imaging" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/video/background_subtraction" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/video/meanshift" />
+          <root url="file://$MODULE_DIR$/ocv/opencv/sources/samples/java/tutorial_code/video/optical_flow" />
+          <root url="file://$MODULE_DIR$/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../Downloads/mysql-connector-java-8.0.28.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

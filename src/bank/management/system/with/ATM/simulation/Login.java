@@ -1,33 +1,29 @@
 package bank.management.system.with.ATM.simulation;
 
-import org.opencv.core.*;
-import org.opencv.core.Point;
-import org.opencv.imgcodecs.Imgcodecs;
-import org.opencv.objdetect.CascadeClassifier;
-import org.opencv.videoio.VideoCapture;
-import org.opencv.imgproc.Imgproc;
+import com.formdev.flatlaf.FlatDarkLaf;
+import org.bytedeco.opencv.global.opencv_core;
+import org.bytedeco.opencv.global.opencv_imgproc;
+import org.bytedeco.opencv.opencv_core.*;
+import org.bytedeco.opencv.opencv_core.Point;
+import org.bytedeco.opencv.opencv_face.LBPHFaceRecognizer;
+import org.bytedeco.opencv.opencv_objdetect.CascadeClassifier;
+import org.bytedeco.opencv.opencv_videoio.VideoCapture;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
-import java.io.File;
-import java.sql.ResultSet;
+import java.sql.*;
 
 public class Login extends JFrame implements ActionListener {
-
-    static {
-        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-    }
 
     JLabel labelTitle, labelCardNo, labelPin;
     JTextField textFieldCardNo;
     JPasswordField passwordFieldPin;
-
-    JButton btnSignIn, btnClear, btnSignUp;
+    JButton btnSignIn, btnClear, btnSignUp, btnAdminLogin;
+    JButton btnStartCamera;
     JLabel faceLabel;
-    JButton btnStartCamera, btnFaceScan;
 
     volatile boolean cameraRunning = false;
     VideoCapture camera;
@@ -36,11 +32,16 @@ public class Login extends JFrame implements ActionListener {
 
     public Login() {
         super("Bank Management System With ATM Simulation");
+        FlatDarkLaf.setup();
+        UIManager.put("Button.arc", 15);
+        UIManager.put("Component.arc", 15);
+        UIManager.put("ProgressBar.arc", 10);
 
         setLayout(null);
         setSize(900, 500);
         setLocation(450, 200);
         setResizable(false);
+
 
         ImageIcon bankIcon = new ImageIcon(ClassLoader.getSystemResource("icon/bank.png"));
         Image bankImg = bankIcon.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
@@ -48,11 +49,13 @@ public class Login extends JFrame implements ActionListener {
         labelBankLogo.setBounds(350, 10, 100, 100);
         add(labelBankLogo);
 
+
         ImageIcon cardIcon = new ImageIcon(ClassLoader.getSystemResource("icon/card.png"));
         Image cardImg = cardIcon.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
         JLabel labelCardIcon = new JLabel(new ImageIcon(cardImg));
         labelCardIcon.setBounds(750, 350, 100, 100);
         add(labelCardIcon);
+
 
         labelTitle = new JLabel("WELCOME TO ATM");
         labelTitle.setForeground(Color.WHITE);
@@ -85,7 +88,7 @@ public class Login extends JFrame implements ActionListener {
         btnSignIn = new JButton("SIGN IN");
         btnSignIn.setFont(new Font("Arial", Font.BOLD, 14));
         btnSignIn.setForeground(Color.WHITE);
-        btnSignIn.setBackground(Color.BLACK);
+        btnSignIn.setBackground(Color.BLACK); // all buttons black
         btnSignIn.setBounds(200, 300, 130, 30);
         btnSignIn.addActionListener(this);
         add(btnSignIn);
@@ -106,27 +109,27 @@ public class Login extends JFrame implements ActionListener {
         btnSignUp.addActionListener(this);
         add(btnSignUp);
 
-        faceLabel = new JLabel("No Camera");
+        btnAdminLogin = new JButton("ADMIN LOGIN");
+        btnAdminLogin.setFont(new Font("Arial", Font.BOLD, 14));
+        btnAdminLogin.setForeground(Color.WHITE);
+        btnAdminLogin.setBackground(Color.BLACK); // changed from gray to black
+        btnAdminLogin.setBounds(200, 390, 300, 30);
+        btnAdminLogin.addActionListener(this);
+        add(btnAdminLogin);
+
+        faceLabel = new JLabel("Camera Preview");
         faceLabel.setHorizontalAlignment(SwingConstants.CENTER);
         faceLabel.setBorder(BorderFactory.createLineBorder(Color.WHITE));
-        faceLabel.setBounds(570, 120, 280, 210);
+        faceLabel.setBounds(600, 50, 250, 250); // decreased size
         add(faceLabel);
 
         btnStartCamera = new JButton("Start Camera");
-        btnStartCamera.setFont(new Font("Arial", Font.BOLD, 12));
+        btnStartCamera.setFont(new Font("Arial", Font.BOLD, 16));
         btnStartCamera.setForeground(Color.WHITE);
-        btnStartCamera.setBackground(new Color(0, 120, 215));
-        btnStartCamera.setBounds(570, 340, 130, 30);
+        btnStartCamera.setBackground(Color.BLACK);
+        btnStartCamera.setBounds(650, 310, 130, 40); // moved up from 370 to 310
         btnStartCamera.addActionListener(this);
         add(btnStartCamera);
-
-        btnFaceScan = new JButton("Scan & Login");
-        btnFaceScan.setFont(new Font("Arial", Font.BOLD, 12));
-        btnFaceScan.setForeground(Color.WHITE);
-        btnFaceScan.setBackground(new Color(0, 160, 100));
-        btnFaceScan.setBounds(720, 340, 130, 30);
-        btnFaceScan.addActionListener(this);
-        add(btnFaceScan);
 
         ImageIcon bgIcon = new ImageIcon(ClassLoader.getSystemResource("icon/backbg.png"));
         Image bg = bgIcon.getImage().getScaledInstance(900, 500, Image.SCALE_DEFAULT);
@@ -134,7 +137,7 @@ public class Login extends JFrame implements ActionListener {
         background.setBounds(0, 0, 900, 500);
         add(background);
 
-        faceDetector = new CascadeClassifier("C:\\Users\\pratik_icy\\IdeaProjects\\OcvTest\\src\\resource\\haarcascade_frontalface_default.xml");
+        faceDetector = new CascadeClassifier("src/haarcascade_frontalface_default.xml");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
@@ -142,149 +145,117 @@ public class Login extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == btnSignIn) {
+        Object src = e.getSource();
+        if (src == btnSignIn) {
             signIn();
-        } else if (e.getSource() == btnClear) {
+        } else if (src == btnClear) {
             textFieldCardNo.setText("");
             passwordFieldPin.setText("");
-        } else if (e.getSource() == btnSignUp) {
+        } else if (src == btnSignUp) {
             setVisible(false);
             new Signup();
-        } else if (e.getSource() == btnStartCamera) {
-            startCamera();
-        } else if (e.getSource() == btnFaceScan) {
-            scanFaceAndLogin();
+        } else if (src == btnAdminLogin) {
+            setVisible(false);
+            new AdminLogin();
+        } else if (src == btnStartCamera) {
+            if (!cameraRunning) {
+                startCameraAndRecognize();
+            }
         }
     }
 
-    private void startCamera() {
-        if (cameraRunning) return;
-
+    private void startCameraAndRecognize() {
         camera = new VideoCapture(0);
         if (!camera.isOpened()) {
-            JOptionPane.showMessageDialog(this, "❌ Cannot open webcam.");
+            JOptionPane.showMessageDialog(this, "Webcam not accessible.");
             return;
         }
-
         cameraRunning = true;
 
         new Thread(() -> {
             currentFrame = new Mat();
+
             while (cameraRunning) {
                 if (!camera.read(currentFrame) || currentFrame.empty()) continue;
 
-                MatOfRect faces = new MatOfRect();
+                RectVector faces = new RectVector();
                 faceDetector.detectMultiScale(currentFrame, faces);
 
-                for (Rect rect : faces.toArray()) {
-                    Imgproc.rectangle(currentFrame, new Point(rect.x, rect.y),
-                            new Point(rect.x + rect.width, rect.y + rect.height),
-                            new Scalar(0, 255, 0), 3);
+                boolean recognized = false;
+
+                for (int i = 0; i < faces.size(); i++) {
+                    Rect rect = faces.get(i);
+                    // Draw rectangle around face
+                    opencv_imgproc.rectangle(currentFrame,
+                            new Point(rect.x(), rect.y()),
+                            new Point(rect.x() + rect.width(), rect.y() + rect.height()),
+                            new Scalar(0, 255, 0, 0), 2, opencv_imgproc.LINE_8, 0);
+
+                    Mat face = new Mat(currentFrame, rect);
+                    opencv_imgproc.cvtColor(face, face, opencv_imgproc.COLOR_BGR2GRAY);
+
+                    try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank_system", "root", "root")) {
+                        String query = "SELECT card_number, pin_number, name, face_model_path FROM signup WHERE face_model_path IS NOT NULL";
+                        PreparedStatement ps = conn.prepareStatement(query);
+                        ResultSet rs = ps.executeQuery();
+
+                        while (rs.next()) {
+                            String modelPath = rs.getString("face_model_path");
+                            String card = rs.getString("card_number");
+                            String pin = rs.getString("pin_number");
+                            String name = rs.getString("name");
+
+                            LBPHFaceRecognizer recognizer = LBPHFaceRecognizer.create();
+                            recognizer.read(modelPath);
+
+                            int[] label = new int[1];
+                            double[] confidence = new double[1];
+                            recognizer.predict(face, label, confidence);
+
+                            recognizer.close();
+
+                            if (confidence[0] < 70) {
+                                recognized = true;
+
+                                cameraRunning = false;
+                                camera.release();
+
+                                SwingUtilities.invokeLater(() -> {
+                                    JOptionPane.showMessageDialog(this,
+                                            "Welcome " + name + "!\nFace recognized.");
+                                    textFieldCardNo.setText(card);
+                                    passwordFieldPin.setText(pin);
+
+                                    setVisible(false);
+                                    new main_Class(card);
+                                });
+                                break;
+                            }
+                        }
+                        rs.close();
+                        ps.close();
+                    } catch (SQLException ex) {
+                        ex.printStackTrace();
+                    }
+
+                    if (recognized) break;
                 }
 
-                BufferedImage img = matToBufferedImage(currentFrame);
-                faceLabel.setIcon(new ImageIcon(img));
+
+                faceLabel.setIcon(new ImageIcon(matToBufferedImage(currentFrame)));
+
+                if (recognized) break;
 
                 try {
-                    Thread.sleep(30);
-                } catch (InterruptedException ex) {
-                    ex.printStackTrace();
+                    Thread.sleep(10);
+                } catch (InterruptedException ignored) {
                 }
             }
-            camera.release();
+
+            if (camera.isOpened()) {
+                camera.release();
+            }
         }).start();
-    }
-
-    private void scanFaceAndLogin() {
-        if (currentFrame == null || currentFrame.empty()) {
-            JOptionPane.showMessageDialog(this, "No frame captured. Start camera first.");
-            return;
-        }
-
-        MatOfRect faces = new MatOfRect();
-        faceDetector.detectMultiScale(currentFrame, faces);
-
-        Rect[] detectedFaces = faces.toArray();
-        if (detectedFaces.length == 0) {
-            JOptionPane.showMessageDialog(this, "✘ No face detected.");
-            return;
-        }
-
-        Rect faceRect = detectedFaces[0];
-        Mat capturedFace = new Mat(currentFrame, faceRect);
-
-        boolean found = false;
-
-        try {
-            Conn c = new Conn();
-            ResultSet rs = c.s.executeQuery("SELECT * FROM signup");
-            while (rs.next()) {
-                String storedFacePath = rs.getString("face_image_path");
-                String cardNo = rs.getString("card_number");
-                String pin = rs.getString("pin_number");
-                String name = rs.getString("name");
-                String phone = rs.getString("phone");
-
-                if (storedFacePath == null || storedFacePath.isEmpty()) continue;
-
-                File f = new File(storedFacePath);
-                if (!f.exists()) {
-                    System.out.println("❌ File not found: " + storedFacePath);
-                    continue;
-                }
-
-                Mat storedFace = Imgcodecs.imread(storedFacePath, Imgcodecs.IMREAD_GRAYSCALE);
-                Imgproc.resize(capturedFace, capturedFace, storedFace.size());
-
-                Mat hist1 = new Mat();
-                Mat hist2 = new Mat();
-
-                Imgproc.cvtColor(capturedFace, capturedFace, Imgproc.COLOR_BGR2GRAY);
-                Imgproc.calcHist(java.util.Collections.singletonList(capturedFace), new MatOfInt(0), new Mat(), hist1, new MatOfInt(256), new MatOfFloat(0, 256));
-                Imgproc.calcHist(java.util.Collections.singletonList(storedFace), new MatOfInt(0), new Mat(), hist2, new MatOfInt(256), new MatOfFloat(0, 256));
-
-                Core.normalize(hist1, hist1);
-                Core.normalize(hist2, hist2);
-
-                double score = Imgproc.compareHist(hist1, hist2, Imgproc.CV_COMP_CORREL);
-
-                if (score > 0.4) {
-                    textFieldCardNo.setText(cardNo);
-                    passwordFieldPin.setText(pin);
-
-                    String maskedPhone = maskString(phone, 3, 3);
-                    String maskedCard = maskString(cardNo, 4, 4);
-
-                    String message = "✔ Face Matched!\nWelcome, " + name +
-                            "\n Phone: " + maskedPhone +
-                            "\n Card: " + maskedCard;
-
-                    JOptionPane.showMessageDialog(this, message);
-
-                    found = true;
-                    break;
-                }
-            }
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-
-        if (found) {
-            signIn();
-        } else {
-            JOptionPane.showMessageDialog(this, "✘ Face not recognized.");
-        }
-    }
-
-    private String maskString(String original, int startUnmasked, int endUnmasked) {
-        if (original == null || original.length() <= (startUnmasked + endUnmasked)) return original;
-        String start = original.substring(0, startUnmasked);
-        String end = original.substring(original.length() - endUnmasked);
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < original.length() - (startUnmasked + endUnmasked); i++) {
-            sb.append("X");
-        }
-        return start + sb + end;
     }
 
     private void signIn() {
@@ -298,29 +269,25 @@ public class Login extends JFrame implements ActionListener {
             }
 
             Conn c = new Conn();
-            String query = "SELECT * FROM signup WHERE card_number = '" + cardNo + "' AND pin_number = '" + pin + "'";
-            ResultSet rs = c.s.executeQuery(query);
+            ResultSet rs = c.s.executeQuery("SELECT * FROM signup WHERE card_number = '" + cardNo + "' AND pin_number = '" + pin + "'");
 
             if (rs.next()) {
                 setVisible(false);
                 new main_Class(cardNo);
             } else {
-                JOptionPane.showMessageDialog(this, "Incorrect Card Number or PIN");
+                JOptionPane.showMessageDialog(this, "Incorrect Card No or PIN");
             }
         } catch (Exception ex) {
             ex.printStackTrace();
-            JOptionPane.showMessageDialog(this, "An error occurred during login.");
         }
     }
 
-    public static BufferedImage matToBufferedImage(Mat mat) {
+    private BufferedImage matToBufferedImage(Mat mat) {
         int type = BufferedImage.TYPE_BYTE_GRAY;
-        if (mat.channels() > 1) {
-            type = BufferedImage.TYPE_3BYTE_BGR;
-        }
+        if (mat.channels() > 1) type = BufferedImage.TYPE_3BYTE_BGR;
         int bufferSize = mat.channels() * mat.cols() * mat.rows();
         byte[] b = new byte[bufferSize];
-        mat.get(0, 0, b);
+        mat.data().get(b);
         BufferedImage image = new BufferedImage(mat.cols(), mat.rows(), type);
         final byte[] targetPixels = ((DataBufferByte) image.getRaster().getDataBuffer()).getData();
         System.arraycopy(b, 0, targetPixels, 0, b.length);
@@ -328,6 +295,6 @@ public class Login extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        new Login();
+        SwingUtilities.invokeLater(Login::new);
     }
 }

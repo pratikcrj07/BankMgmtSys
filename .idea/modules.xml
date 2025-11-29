@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Bank Mgmt System with ATM simulation.iml" filepath="$PROJECT_DIR$/Bank Mgmt System with ATM simulation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ATMsimulation.iml" filepath="$PROJECT_DIR$/ATMsimulation.iml" />
     </modules>
   </component>
 </project>
