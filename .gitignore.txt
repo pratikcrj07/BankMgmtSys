@@ -5,6 +5,13 @@ training_img/
 .idea/
 *.iml
 
+/face_data
+/data.1001
+/trained_models
+/training_img
+/images
+
+
 # Build output directories
 /out/
 /build/

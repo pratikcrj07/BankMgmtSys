@@ -4,6 +4,12 @@
 /face_data
 /images
 /models
+/face_data
+/data.1001
+/trained_models
+/training_img
+/images
+
 # Eclipse
 .classpath
 .project
