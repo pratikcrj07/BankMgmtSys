@@ -1,7 +1,9 @@
 # IntelliJ IDEA
 /.idea/
 
-
+/face_data
+/images
+/models
 # Eclipse
 .classpath
 .project
